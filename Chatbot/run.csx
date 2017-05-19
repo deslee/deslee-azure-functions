@@ -46,8 +46,8 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
     if (platform == ChatPlatform.HipChat) {
         return req.CreateResponse(HttpStatusCode.OK, new {
-            message = $"<a href=\"{url}\"><img src=\"{url}\" /></a><br />{title}",
-            message_format = "html"
+            message = $"{title} {url}",
+            message_format = "text"
         });
     } else {
         return req.CreateResponse(HttpStatusCode.BadRequest, "Unknown platform");
