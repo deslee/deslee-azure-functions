@@ -11,6 +11,7 @@ static string DetermineSubreddit(dynamic data, ChatPlatform platform) {
         var map = new Dictionary<string, string> {
             {"/pupper", "rarepuppers"},
             {"/floof", "floof"},
+            {"/snek", "snek"},
             {"/dog", "dogs"},
             {"/doggif", "doggifs"},
             {"/up", "catsstandingup"},
@@ -70,7 +71,7 @@ static async Task<dynamic> GetPost(string subredditName) {
                     ".jpg", ".jpeg", ".gif", ".png"
                     }.Select(e => ((string)p?.data?.url).EndsWith(e)).Any(r => r == true))
                 .OrderBy(a => Guid.NewGuid())
-                .FirstOrDefault();    
+                .FirstOrDefault();
 
             return randomPost;
         }
