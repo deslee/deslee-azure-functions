@@ -9,6 +9,7 @@ static string DetermineSubreddit(dynamic data, ChatPlatform platform) {
         var message = data?.item?.message?.message?.ToString();
 
         var map = new Dictionary<string, string> {
+            {"/horse", "horses"},
             {"/pupper", "rarepuppers"},
             {"/floof", "floof"},
             {"/snek", "snek"},
