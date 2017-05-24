@@ -71,6 +71,7 @@ static async Task<dynamic> GetPost(string subredditName) {
                 .Where(p => new[]{
                     ".jpg", ".jpeg", ".gif", ".png"
                     }.Select(e => ((string)p?.data?.url).EndsWith(e)).Any(r => r == true))
+                .Where(p => ((bool)p?.data?.over_18) == false)
                 .OrderBy(a => Guid.NewGuid())
                 .FirstOrDefault();
 
