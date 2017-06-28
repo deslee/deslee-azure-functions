@@ -22,7 +22,8 @@ static string DetermineSubreddit(dynamic data, ChatPlatform platform) {
             {"/businesscat", "catsinbusinessattire"},
             {"/birb", "birbs"},
             {"/weather", "catloaf"},
-            {"/test", "catloaf"}
+            {"/test", "catloaf"},
+            {"/boop", "boop"}
         };
 
         string subreddit = null;
